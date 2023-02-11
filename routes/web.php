@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//posts
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::post('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
+Route::post('/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+//users
+Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
+Route::post('/users/{user}', [UserController::class, 'update'])->name('users.update');
+Route::post('/{user}', [UserController::class, 'destroy'])->name('users.destroy');

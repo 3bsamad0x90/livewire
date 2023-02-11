@@ -12,7 +12,10 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{ route('posts') }}">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('users') }}">Users</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
