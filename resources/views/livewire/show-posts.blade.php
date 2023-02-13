@@ -1,5 +1,3 @@
-@extends('layouts.app')
-@section('content')
 <div class="container">
     <div class="row justify-content-center" >
         <div class="col-12">
@@ -32,7 +30,7 @@
                                 <td>{{ $post->user->name }}</td>
                                 <td>{{ $post->image }}</td>
                                 <td>
-                                    <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary m-1">Show</a>
+                                    <a href="{{ route('livewire-posts.show', $post->id) }}" class="btn btn-primary m-1">Show</a>
                                     <a href="{{ route('posts.update', $post->id) }}" class="btn btn-warning m-1">Edit</a>
                                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="d-inline m-1">
                                         @csrf
@@ -54,4 +52,4 @@
         </div>
     </div>
 </div>
-@endsection
+
