@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\ShowPosts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,6 @@ Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
 Route::post('/users/{user}', [UserController::class, 'update'])->name('users.update');
 Route::post('/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+//livewire paths for posts
+Route::get('/livewire-posts', ShowPosts::class)->name('livewire-posts');
