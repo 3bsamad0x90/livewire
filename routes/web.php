@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\DeletePost;
 use App\Http\Livewire\ShowPost;
 use App\Http\Livewire\ShowPosts;
 use Illuminate\Support\Facades\Route;
@@ -39,3 +40,4 @@ Route::post('/{user}', [UserController::class, 'destroy'])->name('users.destroy'
 //livewire paths for posts
 Route::get('/livewire-posts', ShowPosts::class)->name('livewire-posts');
 Route::get('/livewire-posts/{post}', ShowPost::class)->name('livewire-posts.show');
+Route::delete('/livewire-posts/{post}', DeletePost::class)->name('livewire-posts.delete');

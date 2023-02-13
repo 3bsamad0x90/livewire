@@ -32,7 +32,7 @@
                                 <td>
                                     <a href="{{ route('livewire-posts.show', $post->id) }}" class="btn btn-primary m-1">Show</a>
                                     <a href="{{ route('posts.update', $post->id) }}" class="btn btn-warning m-1">Edit</a>
-                                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="d-inline m-1">
+                                    <form action="{{ route('livewire-posts.delete', $post->id) }}" method="POST" class="d-inline m-1">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Delete</button>
