@@ -24,7 +24,8 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input wire:model.lazy="user.email" type="email" class="form-control @error('user.email') is-invalid @enderror" id="email" name="user.email">
+                            {{-- <input wire:model.defer="user.email" wire:keydown="checkemail" type="text" class="form-control @error('user.email') is-invalid @enderror" id="email" name="user.email"> --}}
+                            <input wire:model.defer="user.email" wire:click="checkemail" type="text" class="form-control @error('user.email') is-invalid @enderror" id="email" name="user.email">
                             @error('user.email')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

@@ -45,4 +45,8 @@ class Profile extends Component
         // $this->user->save();
         // $this->success = true;
     }
+    
+    public function checkemail(){
+        $this->validateOnly('user.email');
+    }
 }
