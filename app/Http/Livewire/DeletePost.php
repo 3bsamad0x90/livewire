@@ -14,9 +14,8 @@ class DeletePost extends Component
     }
     public function render()
     {
-
         return <<<'blade'
-            <div >
+            <div class='container'>
                 <button wire:click="delete">Delete Post</button>
             </div>
         blade;
