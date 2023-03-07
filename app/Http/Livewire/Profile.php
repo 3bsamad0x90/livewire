@@ -9,8 +9,9 @@ class Profile extends Component
 {
     // public $name;
     // public $email;
+    public $showHelp = false;
     public $success = false;
-    // protected $rules = [
+     // protected $rules = [
     //     'name' => 'required|min:3',
     //     'email' => 'required|email'
     // ];
@@ -45,8 +46,11 @@ class Profile extends Component
         // $this->user->save();
         // $this->success = true;
     }
-    
+
     public function checkemail(){
         $this->validateOnly('user.email');
     }
+    // public function showHelp(){
+    //     $this->showHelp = !$this->showHelp;
+    // }
 }

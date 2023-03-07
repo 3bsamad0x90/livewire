@@ -32,6 +32,13 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-danger">Update</button>
+                            {{-- <button type="button" class="btn btn-success" wire:click="$set('showHelp', true)">Help</button> --}}
+                            <button type="button" class="btn btn-success" wire:click="$toggle('showHelp')">Toggle</button>
+                            @if($showHelp)
+                                <div class="alert alert-success mt-2">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus recusandae excepturi hic, ullam praesentium corrupti! Enim fugiat qui aliquam velit esse ducimus, corporis id quas ipsa et? Nostrum, suscipit repudiandae?
+                                </div>
+                            @endif
                         </div>
                         @if($success)
                         <div class="alert alert-success mt-2">
