@@ -1,3 +1,5 @@
 <div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+    <li class="nav-item">
+        <a class="nav-link" href="#">Notifications ({{ $notificationCount }})</a>
+    </li>
 </div>

@@ -33,10 +33,12 @@ class Profile extends Component
     {
         return view('livewire.profile');
     }
+
     public function updateProfile(){
         if($this->validate()){
             $this->user->save();
             $this->success = true;
+            $this->emit('notify');
         }
 
         // auth()->user()->update([
